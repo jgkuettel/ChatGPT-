@@ -1,17 +1,20 @@
-GBDK_HOME ?= /opt/gbdk
-LCC := $(GBDK_HOME)/bin/lcc
+This workflow has a workflow_dispatch event trigger.
 
-TARGET := pong
-BUILD := build
-SRC := src
+Build Game Boy ROM
+Build Game Boy ROM #3: Manually run by jgkuettel
+main	
+ 1 minute ago
+  17s
+ 
+Create pong.c
+Build Game Boy ROM #2: Commit dd8de1c pushed by jgkuettel
+main	
+ 2 minutes ago
+  18s
+ 
+Create build.yml
+Build Game Boy ROM #1: Commit 66c12af pushed by jgkuettel
+main	
+ 3 minutes ago
+  15s
 
-CFLAGS := -Wl-yt0x1B -Wl-ya4 -Wm-yoA -Wm-ys0
-
-$(BUILD)/$(TARGET).gb: $(SRC)/pong.c | $(BUILD)
-	$(LCC) $(CFLAGS) -o $@ $<
-
-$(BUILD):
-	mkdir -p $(BUILD)
-
-clean:
-	rm -rf $(BUILD)
