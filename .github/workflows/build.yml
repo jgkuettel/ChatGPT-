@@ -18,10 +18,11 @@ jobs:
 
       - name: Download GBDK-2020
         run: |
-          GBDK_VERSION=4.4.0
-          wget -q https://github.com/gbdk-2020/gbdk-2020/releases/download/${GBDK_VERSION}/gbdk-linux64-${GBDK_VERSION}.tar.gz
-          tar -xzf gbdk-linux64-${GBDK_VERSION}.tar.gz
+          GBDK_VERSION=4.3.0
+          wget -q https://github.com/gbdk-2020/gbdk-2020/releases/download/${GBDK_VERSION}/gbdk-2020-linux64.tar.gz
+          tar -xzf gbdk-2020-linux64.tar.gz
           echo "GBDK_HOME=$PWD/gbdk" >> $GITHUB_ENV
+
 
 
 
